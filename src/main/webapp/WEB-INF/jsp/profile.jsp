@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
    <a class="navbar-brand" href="#">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Creative-Tail-atomi.svg/128px-Creative-Tail-atomi.svg.png" width="30" height="30" alt="">
   </a>
@@ -33,7 +33,7 @@
       
   </div>
 </nav>
-
+<h2 align ="center" style="margin-top:100px"> PROFILE SCREEN </h2>
 <div class="container" style="margin-top:50px">
 <div class="row">
 <div class="col">
@@ -42,10 +42,11 @@
 
 </div>
 
-<div class="col style="margin-top:100px"">
+<div class="col style="margin-top:100px">
 <tr >
 	<td>
-	<h4>Anusha Hiremath</h4>
+	<br></br>
+	<h4>Anusha Hiremath<br></br></h4>
 	</td>
      
      </tr>

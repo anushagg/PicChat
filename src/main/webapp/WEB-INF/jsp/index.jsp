@@ -15,11 +15,11 @@
 </head>
 <body>
 
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
    <a class="navbar-brand" href="#">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Creative-Tail-atomi.svg/128px-Creative-Tail-atomi.svg.png" width="30" height="30" alt="">
   </a>
-  <a class="navbar-brand" href="#">Picture Chat</a>
+  <a class="navbar-brand" href="#">PicChat</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -30,21 +30,24 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
+      
       
   </div>
 </nav>
+<br></br>
+<br></br>
+<h2 align="center">Choose Profile Picture </h2>
+
 <div class="container" style="margin-top:100px">
 <div class="row">
-<div class="col-12">
+<div class="col-12" align = "center" style="margin-left:80px">
+
 <form action="/upload" method = "POST" enctype = "multipart/form-data">
 <input type="file" name="file"/>
 </div>
 </div>
 <div class="row" style="margin-top:100px">
-<div class="col-12">
+<div class="col-12" align = "center">
 <input type="submit" value = "Upload Profile Picture"/>
 </form>
 </div>
