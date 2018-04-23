@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,14 +22,35 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 @Controller
 public class ProfileController {
 	
+	@Autowired
+	private UserRepository userRepo;
+	
 	@GetMapping(value="/")
 	public ModelAndView renderpage() {
 		
 		ModelAndView indexPage = new ModelAndView();
 		
-		indexPage.setViewName("index");
+		indexPage.setViewName("facebookindex");
 		return indexPage;
 	}
+	
+	@PostMapping(value="/user/add")
+	public ModelAndView saveUser(
+			@RequestParam(name="name", required=true) String name,
+			@RequestParam(name="email") String email,
+			@RequestParam(name="desc") String desc
+			) {
+		User u = new User();
+		u.setName(name);
+		u.setEmail(email);
+		u.setDesc(desc);
+		userRepo.save(u);
+		return new ModelAndView("profile");
+//		profilePage.setViewName("profile");
+//		return profilePage;
+	}
+	
+	
 	
 	@PostMapping(value="/upload")
 	public ModelAndView uploadToS3(
@@ -37,7 +59,7 @@ public class ProfileController {
 		ModelAndView profilePage = new ModelAndView();
 
 		BasicAWSCredentials cred = new BasicAWSCredentials(
-				"access_key", "secret_key"
+				"AKIAJMTCWS5E62BXJ5LA", "Tk/cTqXS9EVoTuOfJvwsKKRsw4jzNvjL4CcRG6lk"
 				);
 		
 		AmazonS3 s3client = AmazonS3ClientBuilder

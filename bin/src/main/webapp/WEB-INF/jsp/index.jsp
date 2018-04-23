@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>PicChat</title>
+<title>SE Assignment 2</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -34,12 +34,9 @@
       
   </div>
 </nav>
-
-<div class="container">
-<div class="jumbotron">
 <br></br>
 <br></br>
-<h2 align="center">Create Profile </h2>
+<h2 align="center">Choose Profile Picture </h2>
 
 <div class="container" style="margin-top:100px">
 <div class="row">
@@ -48,33 +45,7 @@
 <form action="/upload" method = "POST" enctype = "multipart/form-data">
 <input type="file" name="file"/>
 </div>
-
-<div class="container">
-
-<div class="col-12">
-<!-- <form action="user/add" method="post"> -->
- <div class="form-group">
-    <label for="name">Full Name</label>
-    <input type="text" name="name" class="form-control" id="name" placeholder="Enter Full Name">
-  </div>
-  <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-  </div>
-   <div class="form-group">
-    <label for="desc">Description</label>
-    <input type="text" name="desc" class="form-control" id="desc" placeholder="Enter short description">
-  </div>
- 
-  <button type="submit" class="btn btn-primary">Submit</button>
-<!-- </form> -->
-
 </div>
-
-</div>
-
-</div>
-
 <div class="row" style="margin-top:100px">
 <div class="col-12" align = "center">
 <input type="submit" value = "Upload Profile Picture"/>
@@ -82,14 +53,6 @@
 </div>
 </div>
 
-</div> 
-
-
-
-
-
-
-</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
